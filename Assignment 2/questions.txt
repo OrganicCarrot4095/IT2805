@@ -1,0 +1,7 @@
+Questions
+
+- Use IDs for unique elements that only appear once on a page. This can be one section of the page that needs different styling from the rest of the page. Use Classes for elements that share styles and can appear multiple times on a page. This can be a pair of buttons. 
+
+- RGBA stands for Red, Green, Blue and Alpha. RGB deals with colors, while A represents the opacity of a color. Virtually, you can express any color in the visible spectrum using RGBA model.
+
+- To access the p elements inside the article element, you can use the following CSS selector "article p {}".

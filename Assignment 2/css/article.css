@@ -1,0 +1,49 @@
+body{
+    font-family: Georgia;
+    line-height: 1.5;
+    font-size: 18px;
+    background: lightgray;
+    color: #323232;
+    width: 75em;
+}
+
+article {
+    width: 960px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 3em;
+    margin: ;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+p, blockquote, ul, ol {
+    font-size: 1em;
+    line-height: 1.5em;
+
+}
+
+header p, h1 {
+    margin:0;
+}
+
+#cover {
+    width: 960px;
+}
+
+#facts {
+    margin: 1em 0em 1em 1em;
+    width: 50%;
+    border: 1px dashed;
+    float: right;
+}
+
+#facts > ul {
+    list-style-image: url('cup-icon.svg');
+    line-height: 1.5em;
+    padding-left: 1.5em;
+}

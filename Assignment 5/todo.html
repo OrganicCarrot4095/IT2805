@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TODO</title>
+        <style>
+            /* I do not like the assignments in my other courses */ 
+            body {
+                display: flex;
+                font-family: 'Courier New', Courier, monospace;
+                background-color: beige;
+                align-items: center;
+                vertical-align: center;
+                justify-content: center;
+            }
+            #list {
+                position: relative;
+                width: fit-content;
+                background-color: rgba(165, 42, 42, 0.636);
+                padding: 1% 2% 4% 2%;
+                margin: 2%;
+                border-radius: 30px;
+                border: brown solid 5px;
+            }
+            #title {
+                text-align: center;
+                color: rgb(100, 24, 24);
+            }
+            button{
+                background-color: rgb(165, 42, 42);
+                color: white;
+                border-radius: 10px;
+                border: none;
+                padding: 5px;
+                margin-left: 5px;
+            }
+            label{
+                color: rgb(100, 24, 24);
+                text-decoration: underline;
+            }
+            input {
+                border-radius: 10px;
+                border: none;
+                padding: 5px;
+                margin-left: 5px;
+            }
+            #todo {
+                font-size: 20px;
+                list-style-type: none;
+            }
+            ul{
+                padding: 0;
+            }
+            li{
+                margin: 5px;
+                padding: 5px;
+                border-radius: 10px;
+                border: brown solid 2px;
+                background-color: rgb(165, 42, 42);
+                color: white;
+            }
+            #taskCounter {
+                position: absolute;
+                bottom: 5%;
+                right: 5%;
+                color: rgb(100, 24, 24);
+                background-color: rgba(165, 42, 42, 0.636);
+                padding: 2%;
+                border-radius: 10px;
+
+            }
+        </style>
+    </head>
+    <div id="list">
+    <body onload="focusOnInput()">
+        <h1 id="title">TODOLIST:</h1>
+        <form id="taskform">
+            <label for="inputField">Add a task:</label>
+            <input id="inputField" type="text">
+            <button type = "submit">Add item</button>
+        </form>
+        <ul id="todo"></ul>
+        <div id="taskCounter">0/0 tasks completed</div>
+    </div>
+        <script src="todo.js"></script>
+    </body>
+</html>

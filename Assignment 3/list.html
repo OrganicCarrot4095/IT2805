@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>A list apart</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+
+      h1{
+        padding-left: 20px;
+      }
+      .wrapper {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      footer {
+        margin-top: auto;
+        background-color: orange;
+        height: 90px;
+      }
+
+      .list {
+        list-style-type: square;
+      }
+
+      .CSS-list, .JS-list {
+        list-style-type: "\2610";
+      }
+
+      .CSS-list li:last-child, .JS-list li:last-child {
+        font-family: "Comic Sans MS";
+        color: red;
+        list-style-type: "\22C6\A0";
+      }
+
+      p {
+        max-width: 50%;
+        padding-left: 20px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <h1>This is a list</h1>
+        <ul class="list">
+          <li>HTML</li>
+          <li>CSS
+          <ul class="CSS-list">
+            <li>LESS</li>
+            <li>Sass</li>
+            <li>SCSS</li>
+          </ul>
+          </li>
+          <li>JavaScript
+          <ul class="JS-list">
+            <li>React</li>
+            <li>Node</li>
+            <li>Jquery</li>
+            <li>Angular</li>
+            <li>Backbone</li>
+            <li>Ember</li>
+            <li>Babel</li>
+          </ul>
+          </li>
+        </ul>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <footer>This is the footer</footer>
+    </div>
+
+  </body>
+</html>
+
+

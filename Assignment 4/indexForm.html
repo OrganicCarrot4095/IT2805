@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tax form</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #container {
+                width: 20%;
+                margin: 0 auto;
+                padding: 30px;
+                background-color: #22f391;   
+                font-family: Arial, Helvetica, sans-serif;
+                border-radius: 20px;
+            }
+            h1 {
+                text-align: center;
+            }
+            form {
+                line-height: 33px;
+            }
+            .title {
+                font-weight: 600;
+                font-size: larger;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <h1>TAX FORM</h1>
+            <form name="taxForm" action="https://folk.ntnu.no/anderobs/webtek/receive_form.php" onsubmit="return formValidation()"  method="post">
+                <label for="name" class="title">Real name*</label><br>
+                <input type="text" id="name" name="name" placeholder="Peter Parker" required><br>
+
+                <label for="gender" class="title">Gender*</label><br>
+                <label>
+                    <input type="radio" name="gender" value="male" required>
+                    Male
+                </label><br>
+                
+                <label>
+                    <input type="radio" name="gender" value="female" required>
+                    Female
+                </label><br>
+
+                <label for="email" class="title">E-mail*</label><br>
+                <input type="email" id="email" name="email" placeholder="spinning@web.com" required><br>
+
+                <label for="birthdate" class="title">Birthday*</label><br>
+                <input type="date" id="birthdate" name="birthdate" required><br>
+
+                <label for="hero" class="title">Hero name*</label><br>
+                <input type="text" id="hero" name="hero" placeholder="Spider-Man" required><br>
+
+                <label for="spandex" class="title">Do you wear spandex?</label>
+                <input type="checkbox" id="spandex" name="spandex"> <br>
+
+                <label for="strength" class="title">Strength</label>
+                <select name="strength" id="strength">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select><br>
+
+                <label for="speed" class="title">Speed</label>
+                <select name="speed" id="speed ">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select><br>
+
+                <label for="intelligence" class="title">Intelligence</label>
+                <select name="intelligence" id="intelligence">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <br>
+                <input type="submit" value="Submit tax form">
+            </form>
+        </div>
+        <script src="form.js"></script> 
+    </body>
+</html>

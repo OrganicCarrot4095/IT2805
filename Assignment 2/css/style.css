@@ -1,0 +1,70 @@
+
+body {
+	font-family: Arial, Verdana; 
+	background: deeppink;
+}
+
+h2 {
+	text-align: center;
+	font-family: Bradley Hand, Courier;
+	font-size: 50px;
+}
+
+.question-section h2{
+	text-align: left;
+}
+
+.info_section h3 {
+	text-align: center
+	color: greenyellow;
+	font-family: Verdana;
+}
+
+.mario-container {
+	width:200px;
+	max-width:100%;
+}
+
+.img {
+	position:relative;
+	width:150px;
+	border-width: 5px;
+	border-style: dotted;
+	border-color: greenyellow;
+}
+
+
+.responsive-iframe {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 360;
+	height: 878 
+}
+
+.mario-caption {
+	font-family: cursive;
+	text-size-adjust: ;
+}
+
+.text-content {
+	width: 500px;
+	max-width: 100%;
+	background: lightblue;
+}
+
+.text-content p {
+	font-family: Georgia, Arial;
+}
+
+.question-section {
+	width: 900px;
+	max-width: 100%;
+}
+
+.footer {
+	text-align: center;
+}
+
+
+

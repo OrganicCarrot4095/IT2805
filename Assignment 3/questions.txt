@@ -1,0 +1,14 @@
+Questions
+
+1. When using position:absolute the element will be positioned relative to the closest positioned ancestor.
+   The element will be removed from normal document flow.
+
+   When using position:relavige the element will be positioned relative to its original position. The element
+   will remain in normal document flow.
+
+2. To access the third element within another element with CSS3, we can use the ":nth-child" pseudo class. More 
+   explicitly, we could write "selector:nth-child(3)", where "selector" is the CSS selecor for the parent element.
+
+3. This CSS snippet hides the element with the ID 'logo' when the device used has a screen width within 
+   the range of 768-1024px. Since the device in this case has a resolution of 320x568, the width of the 
+   device is 320px, not fulfilling the given conditions. Therefore, the 'logo' element will be displayed as normal.
