@@ -59,17 +59,31 @@ This "<...>" is called a tag, while this "<...></...>" is called an element. HTM
 - E-mail links: ```<a href="mailto:example@email.com">E-mail example</a>```
 
 #### Images
-- ```<img src="" alt="text if img fails to load">```
+- ```<img src="" alt="text if img fails to load" title="" heigth=px width=px >```
 - good practice to specify size
 - inline element
 - when using img: right format (JPG, GIF, PNG), right size, measure in px
 - formats: lossless - smaller but quality still OK, lossy - smaller and quality bad
 - JPG: lossy format, best for pictures
-- PNG: lossless, best for logos and graphics
+- PNG: lossless, best for logos and graphics, can alter transparency
 - GIF: limited of colors, bad for photos with high resolution. good for animations, bad for everything else.
 - SVG: vector format, can scal indefinitely without loosing quality. good for logos, graphics and animations, bad for everything else.
 
-#### Tables
+#### Video (same concept with audio)
+```
+<video src="" controls (gives user access to video controls)>
+	<p> Your browser doesn't support HTML5 video.</p>
+</video>
+<video controls>
+	<source src="...mp4" type="video/mp4">
+	<source src="...ogg" type="video/ogg">
+	<p> Your browser doesn't support HTML5 video.</p>
+</video>
+```
+other attributes: autoplay, height, width, loop, muted, poster
+
+
+#### Table
 ```
 <table>                                                  <table>
 	<tr>                                                     <tr>
@@ -109,7 +123,6 @@ This "<...>" is called a tag, while this "<...></...>" is called an element. HTM
 - Site map --> Storyboard
 
 
-
 ## CSS
 Think of each element as a box
 
@@ -135,19 +148,128 @@ Order of precence:
 - weight: light, medium, regular, bold and black
 - style: normal, *italic*, or **oblique**
 
-
 #### Pseudo-classes 
-```selector:pseudo{propery:value;} ```
+<img src="pseudo-classes.png" width="800"/>
 
-  
-#### **Properties**:
-- ```display```: inline, block
+#### Styling lists
+- ```<ul>: list-style-type: none, disc, circle, square, url()```
+- ```<ol>: list-style-type: decimal, decimal-leading-zero, lower-alpha, upper-alpha, lower-romar, upper-roman, u```
+- ```list-style-position: outside, inside```
 
+#### Properties
+- ```display```: inline, block, inline-block (flow like inline, keeping other block-level features), none ("removes" element)
+- ```visibility```: hidden (makes element unvisible), visible
+- ```position```: static (follows html code), relative (same as static, but can move element relative to where it originally was [top, left, right, bottom]), fixed (places relative to the viewport, always visible), absolute ("removes" element from document flow, everything else renders as if there is no element there. can be placed as relative to next parent element with a position property), sticky (relative until it reaches the top, e.g. navbar)
+- ```overflow```: visible (default), hidden(clipped), scroll (scrollbar), auto (depends on user agent)
 
-## Web and multimedia
 
 ## Forms and validation
+- ```<form action="URL for data to be sent" method="GET/POST"></form>```
+- ```<fieldset>```: grouping elements with same purpose
+- ```<legend>```,
+- ```<label for="id">``` (describing what the content for the form element should be),
+- ```<input id="id" name="id" type="text/email/password/checkbox/radio/file/date/number/tel/textarea accept="e.g. '.jpg, .png, .wav' or 'image/*'" value="" tabindex="" placeholder="" step="" min="" max="" maxlength="" pattern="RegEx" autofocus autocomplete checked (default) multiple required>```
+- ```<select>```
+- ```<output>``` (calculates with the given inputs) and
 
-## Responsive web design
+Validate by using correct ```type```s . Use CSS and pseudo-classes to enlighten to user. 
+
+
+#### Responsive web design
+
+```
+@media all/screen/print (expression) and/not/only (expression){
+	element {
+		proptery: value;
+	}
+}
+```
+-```<expression>```: width, height, device-width, device-height, orientation, aspect-ratio, device-aspect-ratio, color, color-index, monochrome, resolution, scan, grid
+
 
 ## JavaScript
+- Data types: string, number, boolean
+- Aritmetics: addition (+), subtraction (-), multiplication (*), division (/), modulo (%)
+- Log ops: ```<```, ```<=```, ```>```, ```>=```, ```==```, ```===```, ```!=```, ```!==```, ```&&```, ```||```, ```!```
+- Variables: ```var``` (function-scoped and allows re-declaration), ```let``` (block-scoped), ```const``` (block-scoped and doesn't allow re-delaration)
+- Conditions and loops: ```if```, ```while```, ```for```, ```break```, ```continue```
+- Objects:
+  ```
+	const movie = {
+		title: "Bruno",
+		director: "Larry Charles",
+		releaseDate: 2009
+  	}
+
+  	console.log(movie.title/movie["title"]) // logs title to console 
+  	movie.genre = "documentary" // creates new property
+  ```
+- Functions:
+  ```
+  	var lolz = function() {
+		return "loser"
+  	}
+  
+  	function lolz() {
+		return "loser"
+  	}
+
+  	console.log(lolz())
+  ```
+  
+
+#### JSON
+```
+	JSON.stringify(movie) -> "{title: "Bruno", director: "Larry Charles", releaseDate: 2009, genre: "documentary"}"
+	const movieJSON = JSON.stringify(movie)
+ 	console.log(JSON.parse(movieJSON).title) 
+```
+
+#### Arrays
+- ```.filter(item => item === criteria)```: removes everything that doesn't fulfill a given criteria
+- ```.map(item => item.transformation())```: makes it possible to transform elements
+- ```.some(item => item condition)```: returns whether the condition is true or not for some of the elements
+- ```.every(item => item condition)```: returns whether the condition is true or not for every element
+- ```.forEach(item => item action)```: do something with each of the elements
+
+#### Time
+- Timeout: ```setTimeout(() => {alarm(), 60000})```
+- Interval: ```setInterval(() => {alarm(), 60000})```
+
+## DOM
+#### Selecting
+```const item = document.selector(...)```
+Selectors:
+- ```.querySelector('...')```: selects first with given input
+- ```.querySelectorAll('...')```: selects all with given input
+- ```.getElementById('id')```: selects element with specified id
+- ```.getElementByClassName('classname')```: selects element with specified classname
+- ```.getElementByName('name')```: selects element with name id
+- ```.getElementByTagName('tag')```: selects element with specified tag name
+
+#### Modifying
+```const item = document.selector(...)```
+```item[].innerText = "...";```
+
+
+#### Adding
+```const parentItem = document.selector(...)```
+```const item = document.createElement(...)```
+```item.innerText = ""```
+```parentItem.appendChild(item)```
+
+
+#### Removing
+```const parentItem = document.selector(...)```
+```const item = parentItem.firstChild```
+```parentItem.removeChild(item)```
+
+#### Events
+```const item = document.selector(...)```
+```item.addEventLister('event', (event) => {do this})```
+Eventlisteners:
+
+
+
+
+
