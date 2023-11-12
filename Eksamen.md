@@ -267,11 +267,12 @@ Selectors:
 #### Events
 ```const item = document.selector(...)```
 ```item.addEventLister('event', (event) => {do this})```
+
 Eventlisteners:
 <div>
-	<img src="events1.png" width="350"/>
-	<img src="events2.png" width="350"/>
-	<img src="events3.png" width="350"/>
+	<img src="events1.png" width="305"/>
+	<img src="events2.png" width="305"/>
+	<img src="events3.png" width="325"/>
 </div>
 
 
