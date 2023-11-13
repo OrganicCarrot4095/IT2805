@@ -249,23 +249,30 @@ Selectors:
 
 #### Modifying
 ```const item = document.selector(...)```
+
 ```item[].innerText = "...";```
 
 
 #### Adding
 ```const parentItem = document.selector(...)```
+
 ```const item = document.createElement(...)```
+
 ```item.innerText = ""```
+
 ```parentItem.appendChild(item)```
 
 
 #### Removing
 ```const parentItem = document.selector(...)```
+
 ```const item = parentItem.firstChild```
+
 ```parentItem.removeChild(item)```
 
 #### Events
 ```const item = document.selector(...)```
+
 ```item.addEventLister('event', (event) => {do this})```
 
 Eventlisteners:
