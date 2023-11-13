@@ -246,7 +246,7 @@ Selectors:
 - ```.querySelectorAll('...')```: selects all with given input
 - ```.getElementById('id')```: selects element with specified id
 - ```.getElementByClassName('classname')```: selects element with specified classname
-- ```.getElementByName('name')```: selects element with name id
+- ```.getElementByName('name')```: selects element with name
 - ```.getElementByTagName('tag')```: selects element with specified tag name
 
 #### Modifying
