@@ -101,6 +101,17 @@ other attributes: autoplay, height, width, loop, muted, poster
 							</table> 
 ```
 
+#### Forms and validation
+- ```<form action="URL for data to be sent" method="GET/POST"></form>```
+- ```<fieldset>```: grouping elements with same purpose
+- ```<legend>```,
+- ```<label for="id">``` (describing what the content for the form element should be),
+- ```<input id="id" name="id" type="text/email/password/checkbox/radio/file/date/number/tel/textarea accept="e.g. '.jpg, .png, .wav' or 'image/*'" value="" tabindex="" placeholder="" step="" min="" max="" maxlength="" pattern="RegEx" autofocus autocomplete checked (default) multiple required>```
+- ```<select>```
+- ```<output>``` (calculates with the given inputs) and
+
+Validate by using correct ```type```s . Use CSS and pseudo-classes to enlighten to user. 
+
 #### Semantic elements
 - Header: ```<header>```
 - Footer: ```<footer>```
@@ -162,19 +173,6 @@ Order of precence:
 - ```position```: static (follows html code), relative (same as static, but can move element relative to where it originally was [top, left, right, bottom]), fixed (places relative to the viewport, always visible), absolute ("removes" element from document flow, everything else renders as if there is no element there. can be placed as relative to next parent element with a position property), sticky (relative until it reaches the top, e.g. navbar)
 - ```overflow```: visible (default), hidden(clipped), scroll (scrollbar), auto (depends on user agent)
 
-
-## Forms and validation
-- ```<form action="URL for data to be sent" method="GET/POST"></form>```
-- ```<fieldset>```: grouping elements with same purpose
-- ```<legend>```,
-- ```<label for="id">``` (describing what the content for the form element should be),
-- ```<input id="id" name="id" type="text/email/password/checkbox/radio/file/date/number/tel/textarea accept="e.g. '.jpg, .png, .wav' or 'image/*'" value="" tabindex="" placeholder="" step="" min="" max="" maxlength="" pattern="RegEx" autofocus autocomplete checked (default) multiple required>```
-- ```<select>```
-- ```<output>``` (calculates with the given inputs) and
-
-Validate by using correct ```type```s . Use CSS and pseudo-classes to enlighten to user. 
-
-
 #### Responsive web design
 
 ```
@@ -185,6 +183,9 @@ Validate by using correct ```type```s . Use CSS and pseudo-classes to enlighten 
 }
 ```
 -```<expression>```: width, height, device-width, device-height, orientation, aspect-ratio, device-aspect-ratio, color, color-index, monochrome, resolution, scan, grid
+
+
+
 
 
 ## JavaScript
