@@ -161,7 +161,7 @@ Order of precence:
 - style: normal, *italic*, or **oblique**
 
 #### Pseudo-classes 
-<img src="pseudo-classes.png" width="800"/>
+<img src="pseudo-classes.png" width="600"/>
 
 #### Styling lists
 - ```<ul>: list-style-type: none, disc, circle, square, url()```
