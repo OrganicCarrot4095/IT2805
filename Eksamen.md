@@ -80,7 +80,7 @@ This "<...>" is called a tag, while this "<...></...>" is called an element. HTM
 	<p> Your browser doesn't support HTML5 video.</p>
 </video>
 ```
-other attributes: autoplay, height, width, loop, muted, poster
+other attributes: ```autoplay```, ```height```, ```width```, ```loop```, ```muted```, ```poster```
 
 
 #### Table
@@ -143,11 +143,12 @@ Order of precence:
 - Specifity
 - Important
 - Level of styles: inline style (in tag), embedded styles (inside ```<style>```-element [in head]), external style sheet, user specified styles and browser default.
+  
   Inline style highest precedence --> browser default lowest precedence
 
 #### Other things to remember
 - Inheritance: if said in the parent element, all children will follow unless other is specified.
-- Selectors: ```#id```, ```.class```, ```element```, ```*```, ```li  > a``` (all links inside list), ```p a``` (any lik inside a paragraph), ```h1+p``` (first paragraph after h1), ```h1~p``` (all paragraphs after h1)
+- Selectors: ```#id```, ```.class```, ```element```, ```*```, ```li  > a``` (all links inside list), ```p a``` (any link inside a paragraph), ```h1+p``` (first paragraph after h1), ```h1~p``` (all paragraphs after h1)
 - Color: can be specified using hex codes (```#XXXXXX```), color names (```red```) or RGB values (```rgb[a](x, y, z, [opacity])```)
 - Margin: space between border and neighbours
 - Padding: space between content and border
