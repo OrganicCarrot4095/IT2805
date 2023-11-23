@@ -64,10 +64,10 @@ This "<...>" is called a tag, while this "<...></...>" is called an element. HTM
 - inline element
 - when using img: right format (JPG, GIF, PNG), right size, measure in px
 - formats: lossless - smaller but quality still OK, lossy - smaller and quality bad
-- JPG: lossy format, best for pictures
-- PNG: lossless, best for logos and graphics, can alter transparency
-- GIF: limited of colors, bad for photos with high resolution. good for animations, bad for everything else.
-- SVG: vector format, can scal indefinitely without loosing quality. good for logos, graphics and animations, bad for everything else.
+- JPG (Joint Photographic Experts Group): lossy format, best for pictures
+- PNG (Portable Network Graphics): lossless, best for logos and graphics, can alter transparency
+- GIF (Graphic Interchange Format): limited of colors, bad for photos with high resolution. good for animations, bad for everything else.
+- SVG (Scalable Vector Graphics): vector format, can scal indefinitely without loosing quality. good for logos, graphics and animations, bad for everything else.
 
 #### Video (same concept with audio)
 ```
@@ -170,9 +170,9 @@ Order of precence:
 
 #### Properties
 - ```display```: inline, block, inline-block (flow like inline, keeping other block-level features), none ("removes" element)
-- ```visibility```: hidden (makes element unvisible), visible
+- ```visibility```: hidden (makes element invisible), visible (default visible), collapse (table thing), initial (default), inherit (what parent has)
 - ```position```: static (follows html code), relative (same as static, but can move element relative to where it originally was [top, left, right, bottom]), fixed (places relative to the viewport, always visible), absolute ("removes" element from document flow, everything else renders as if there is no element there. can be placed as relative to next parent element with a position property), sticky (relative until it reaches the top, e.g. navbar)
-- ```overflow```: visible (default), hidden(clipped), scroll (scrollbar), auto (depends on user agent)
+- ```overflow```: visible (default/"overwrites"), hidden (clipped), scroll (scrollbar), auto (depends on user agent), clip
 
 #### Responsive web design
 
