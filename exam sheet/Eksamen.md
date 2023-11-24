@@ -269,9 +269,13 @@ Selectors:
 
 
 #### Events
-```const item = document.selector(...)```
+```javascript 
+const item = document.selector(...)
+```
 
-```item.addEventLister('event',  {do this})```
+```javascript
+item.addEventLister('event',  {do this})
+```
 
 <div>
 	<img src="events1.png" width="304"/>
@@ -281,7 +285,7 @@ Selectors:
 
 
 ## Example tasks
-```
+```javascript
 	<head>
 	    <style>
 	        #correct{display: none;}
@@ -336,7 +340,7 @@ Selectors:
 	    </script>
 	</body>
 ```
-```
+```javascript
         <form class="form">
             <div>
                 <label>First Name:</label>
@@ -455,7 +459,7 @@ When you click on the `button`, the following happens:
 
 Sometimes, you might not want an event to bubble up the DOM tree. You can stop this behavior by using `event.stopPropagation()` in the event handler. For example:
 
-```
+```javascript
 document.getElementById('child').addEventListener('click', function(event) {
     alert('Button Clicked!');
     event.stopPropagation(); // This stops the event from bubbling up
