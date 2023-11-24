@@ -148,17 +148,13 @@ Order of precence:
 
 #### Other things to remember
 - Inheritance: if said in the parent element, all children will follow unless other is specified.
-- Selectors: ```#id```, ```.class```, ```element```, ```*```, ```li  > a``` (all links inside list), ```p a``` (any link inside a paragraph), ```h1+p``` (first paragraph after h1), ```h1~p``` (all paragraphs after h1)
+- Selectors: ```#id```, ```.class```, ```element```, ```*```, ```li  > a``` (all direct children links inside lists), ```p a``` (any link inside a paragraph), ```h1+p``` (first paragraph after h1), ```h1~p``` (all paragraphs after h1)
 - Color: can be specified using hex codes (```#XXXXXX```), color names (```red```) or RGB values (```rgb[a](x, y, z, [opacity])```)
 - Margin: space between border and neighbours
 - Padding: space between content and border
 - Centering elements: ```margin-left:auto``` and ```margin-right:auto```
 - Border: ```border-style```(e.g. none, hidden, dotted, dashed, solid, double), ```border-color``` and ```border-width```
-
-#### Text
-- typeface: serif (e.g. times new roman), sans-serif (e.g. arial), monospace (e.g. courier)
-- weight: light, medium, regular, bold and black
-- style: normal, *italic*, or **oblique**
+  
 ```
 .task1:hover OR a:first-child:hover{color: green; font-size: 22px;} // Spesific link
 i:first-of-type{background-color: yellow;} // First italics
@@ -166,8 +162,13 @@ a::before{content: url(smiley.gif)} // Smiley before link
 div:last-child p OR a[href$=".php"]{background: yellow} // Background of link with php extension
 a:active{border: 1px solid black} // All active links
 ```
+
+#### Text
+- typeface: serif (e.g. times new roman), sans-serif (e.g. arial), monospace (e.g. courier)
+- weight: light, medium, regular, bold and black
+- style: normal, *italic*, or **oblique**
 #### Pseudo-classes 
-<img src="pseudo-classes.png" align="center" width="200px"/>
+<img src="pseudo-classes.png" align="center" width="300px"/>
 
 #### Styling lists
 - ```<ul>: list-style-type: none, disc, circle, square, url()```
@@ -324,28 +325,22 @@ Eventlisteners:
         function checkCharacters(){
             let mail = email.value
             if (mail.includes(".") && mail.includes("@") ){
-                return true
-            } else {
-                return false
-            }
+                return true}
+            else {return false}
         }
         function checkBeforeAndAfter(){
             let mail = email.value
             let splitMail = mail.split("@")
             if(splitMail[0].length > 1 && splitMail[1].length > 1) {
-                return true
-            } else {
-                return false
-            }
+                return true}
+            else {return false}
         }
         function checkAfter(){
             let mail = email.value
             let splitMail = mail.split(".")
             if(splitMail[1].length > 1) {
-                return true
-            } else {
-                return false
-            }
+                return true}
+            else {return false}
         }
         mail.addEventListener('keyup', changeCase)
         function changeCase(){
