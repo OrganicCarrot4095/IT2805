@@ -167,7 +167,7 @@ div:last-child p OR a[href$=".php"]{background: yellow} // Background of link wi
 a:active{border: 1px solid black} // All active links
 ```
 #### Pseudo-classes 
-<img src="pseudo-classes.png" align="center" height="300"/>
+<img src="pseudo-classes.png" align="center" height="300px"/>
 
 #### Styling lists
 - ```<ul>: list-style-type: none, disc, circle, square, url()```
