@@ -1,15 +1,11 @@
 # EKSAMEN IT2805
 
-## Introduction
-#### Webarchitecture
-
+## KTN basically
 Server-client relationship, Cloud, Network
-
-#### The Internet
 TCP/IP, OSI-model: application (HTTP, FTP, SSH), transport (TCP, UDP), network (IP), data link (ethernet, WiFi), physical, Domains and DNS, Routing, WWW,
 
 ## Document Object Model
-Programming interface for HTML an XML. A web page is a document, which can be displayed in the browser, the HTML file itself or as a document tree. This HTML file:
+Programming interface for HTML and XML. A web page is a document, which can be displayed in the browser, the HTML file itself or as a document tree. This HTML file:
 ```
 <!DOCTYPE html>
 <html>
