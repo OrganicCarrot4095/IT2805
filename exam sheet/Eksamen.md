@@ -299,7 +299,6 @@ Eventlisteners:
         #correct{display: none;}
         #incorrect{display: none;}
     </style>
-
 </head>
 <body>
     Email: <input type="text" id = "mail"> </input> <br>
@@ -318,8 +317,8 @@ Eventlisteners:
                 document.getElementById('correct').style.display = 'inline'
                 document.getElementById('incorrect').style.display = 'none'
             } else {
-                document.getElementById('incorrect').style.display = 'inline'
                 document.getElementById('correct').style.display = 'none'
+                document.getElementById('incorrect').style.display = 'inline'
             }
         }
         function checkCharacters(){
