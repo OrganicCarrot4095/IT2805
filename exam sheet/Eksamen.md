@@ -164,7 +164,7 @@ a:active{border: 1px solid black} // All active links
 - weight: light, medium, regular, bold and black
 - style: normal, *italic*, or **oblique**
 #### Pseudo-classes 
-<img src="pseudo-classes.png" align="center" width="300px"/>
+<img src="pseudo-classes.png" align="center" width="350px"/>
 
 #### Styling lists
 - ```<ul>: list-style-type: none, disc, circle, square, url()```
