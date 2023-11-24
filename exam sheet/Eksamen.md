@@ -151,7 +151,7 @@ Order of precence:
 - Centering elements: ```margin-left:auto``` and ```margin-right:auto```
 - Border: ```border-style```(e.g. none, hidden, dotted, dashed, solid, double), ```border-color``` and ```border-width```
   
-```html
+```css
 .task1:hover OR a:first-child:hover{color: green; font-size: 22px;} // Spesific link
 i:first-of-type{background-color: yellow;} // First italics
 a::before{content: url(smiley.gif)} // Smiley before link
@@ -179,7 +179,7 @@ a:active{border: 1px solid black} // All active links
 
 #### Responsive web design
 
-```html
+```css
 @media all/screen/print (expression) and/not/only (expression){
 	element {
 		proptery: value;
@@ -281,6 +281,7 @@ item.addEventLister('event',  {do this})
 
 
 ## Example tasks
+#### Form validation 1
 ```javascript
 	<head>
 	    <style>
@@ -336,6 +337,8 @@ item.addEventLister('event',  {do this})
 	    </script>
 	</body>
 ```
+
+#### Form validation 2
 ```javascript
         <form class="form">
             <div>
