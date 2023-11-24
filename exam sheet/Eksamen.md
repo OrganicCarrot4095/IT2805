@@ -450,7 +450,7 @@ When you click on the `button`, the following happens:
 
 1. The event on the `button` is triggered first. An alert pops up saying "Button Clicked!".
 2. After the `button`'s event handler is executed, the event bubbles up to the `div` (the parent element). Its event handler is then triggered, and an alert pops up saying "Parent Div Clicked!".
-
+ 
 ### Stopping Event Bubbling:
 
 Sometimes, you might not want an event to bubble up the DOM tree. You can stop this behavior by using `event.stopPropagation()` in the event handler. For example:
