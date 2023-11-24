@@ -291,5 +291,70 @@ Eventlisteners:
 </div>
 
 
+## Example task
+
+<html>
+<head>
+    <style>
+        #correct{display: none;}
+        #incorrect{display: none;}
+    </style>
+
+</head>
+<body>
+    Email: <input type="text" id = "mail"> </input> <br>
+    <img src="correct.png" id="correct">
+    <img src="incorrect.png" id="incorrect">
+    <script>
+        let email = document.getElementById("mail")
+        mail.addEventListener('mouseover', changeColor)
+        mail.addEventListener('focus', changeColor)
+        function changeColor(){
+            email.style.backgroundColor = 'yellow'
+        }
+        mail.addEventListener('blur',validate)
+        function validate(){
+            if (checkCharacters() && checkBeforeAndAfter() && checkAfter()){
+                document.getElementById('correct').style.display = 'inline'
+                document.getElementById('incorrect').style.display = 'none'
+            } else {
+                document.getElementById('incorrect').style.display = 'inline'
+                document.getElementById('correct').style.display = 'none'
+            }
+        }
+        function checkCharacters(){
+            let mail = email.value
+            if (mail.includes(".") && mail.includes("@") ){
+                return true
+            } else {
+                return false
+            }
+        }
+        function checkBeforeAndAfter(){
+            let mail = email.value
+            let splitMail = mail.split("@")
+            if(splitMail[0].length > 1 && splitMail[1].length > 1) {
+                return true
+            } else {
+                return false
+            }
+        }
+        function checkAfter(){
+            let mail = email.value
+            let splitMail = mail.split(".")
+            if(splitMail[1].length > 1) {
+                return true
+            } else {
+                return false
+            }
+        }
+        mail.addEventListener('keyup', changeCase)
+        function changeCase(){
+            email.value=email.value.toUpperCase()
+        }
+    </script>
+</body>
+</html>
+
 
 
