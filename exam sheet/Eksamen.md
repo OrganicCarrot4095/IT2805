@@ -159,7 +159,13 @@ Order of precence:
 - typeface: serif (e.g. times new roman), sans-serif (e.g. arial), monospace (e.g. courier)
 - weight: light, medium, regular, bold and black
 - style: normal, *italic*, or **oblique**
-
+```
+.task1:hover OR a:first-child:hover{color: green; font-size: 22px;} // Spesific link
+i:first-of-type{background-color: yellow;} // First italics
+a::before{content: url(smiley.gif)} // Smiley before link
+div:last-child p OR a[href$=".php"]{background: yellow} // Background of link with php extension
+a:active{border: 1px solid black} // All active links
+```
 #### Pseudo-classes 
 <img src="pseudo-classes.png" width="600"/>
 
