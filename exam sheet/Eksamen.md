@@ -380,14 +380,12 @@ Eventlisteners:
             for (let i = 0; i < firstName.value.length; i++) {
                 if (/[0-9]/.test(firstName.value[i])){
                     alert("First name cannot contain any numbers")
-                    return false;
-                }
+                    return false;}
             }
             for (let j = 0; j < lastName.value.length; j++) {
                 if (/[0-9]/.test(lastName.value[j])){
                     alert("Last name cannot contain any numbers");
-                    return false;
-                }
+                    return false;}
             }
             return true;
         };
@@ -397,22 +395,17 @@ Eventlisteners:
             let number = 0;
             for (let i = 0; i < password.value.length; i++) {
                 if(/[0-9]/.test(password.value[i])){
-                    number++;
-                }
+                    number++;}
                 else if (/[A-Z]/.test(password.value[i])) {
-                    capitalLetter++;
-                }
+                    capitalLetter++;}
                 else if (/[!@#$%^&*()_+\-=[\]{};':"\\,.<>\/?]/.test(password.value[i])) {
-                    specialSign++;
-                }
+                    specialSign++;}
             }
             if (specialSign > 0 && number > 0 && capitalLetter > 0){
-                return true
-            }
+                return true}
             else{
                 alert("Your password is not strong enough")
-                return false
-            }
+                return false}
         }
         function validateBirthday(){
             let today = new Date(); 
@@ -422,19 +415,13 @@ Eventlisteners:
             age = yearToday - yearBorn
             if (age < 18){
                 alert("You need to be 18 years old.")
-                return false
-            }
-            else{
-                return true
-            }
+                return false;}
+            else{return true}
         }
         function validate(){
             if (validateBirthday() && validateName() && validatePassword()){
-                return true;
-            }
-            else{
-                return false;
-            }
+                return true;}
+            else{return false;}
         }
         </script>
     </body>
