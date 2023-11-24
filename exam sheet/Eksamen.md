@@ -6,7 +6,7 @@
 Server-client relationship, Cloud, Network
 
 #### The Internet
-TCP/IP, OSI-model: application, transport, network, data link, physical, Domains and DNS, Routing, WWW,
+TCP/IP, OSI-model: application (HTTP, FTP, SSH), transport (TCP, UDP), network (IP), data link (ethernet, WiFi), physical, Domains and DNS, Routing, WWW,
 
 ## Document Object Model
 Programming interface for HTML an XML. A web page is a document, which can be displayed in the browser, the HTML file itself or as a document tree. This HTML file:
@@ -140,7 +140,7 @@ Think of each element as a box
 #### Cascade
 Order of precence: 
 - The last rule
-- Specifity
+- Specifity (inline, IDs, classes and pseudo-classes, elements and pseudo-elements)
 - Important
 - Level of styles: inline style (in tag), embedded styles (inside ```<style>```-element [in head]), external style sheet, user specified styles and browser default.
   
@@ -291,7 +291,7 @@ Eventlisteners:
 </div>
 
 
-## Example task
+## Example tasks
 ```
 <html>
 <head>
@@ -353,6 +353,96 @@ Eventlisteners:
         }
     </script>
 </body>
+```
+```
+<body>
+        <form class="form">
+            <div>
+                <label>First Name:</label>
+                <input id="firstName" type="text">
+            </div>
+            <div>
+                <label>Last Name:</label>
+                <input id="lastName" type="text">
+            </div>
+            <div>
+                <label>Password:</label>
+                <input id="password" type="password">
+            </div>
+            <div>
+                <label>Date of birth:</label>
+                <input id="birthdate" type="date">
+            </div>
+            <button onclick="validate()" style="width: fit-content">Submit</button>
+        </form>
+    </div>
+    <script>
+        let firstName = document.getElementById("firstName");
+        let lastName = document.getElementById("lastName");
+        let password = document.getElementById("password");
+        let birthdate = document.getElementById("birthdate");
+        function validateName(){
+            for (let i = 0; i < firstName.value.length; i++) {
+                if (/[0-9]/.test(firstName.value[i])){
+                    alert("First name cannot contain any numbers")
+                    return false;
+                }
+            }
+            for (let j = 0; j < lastName.value.length; j++) {
+                if (/[0-9]/.test(lastName.value[j])){
+                    alert("Last name cannot contain any numbers");
+                    return false;
+                }
+            }
+            return true;
+        };
+        function validatePassword(){
+            let capitalLetter = 0;
+            let specialSign = 0;
+            let number = 0;
+            for (let i = 0; i < password.value.length; i++) {
+                if(/[0-9]/.test(password.value[i])){
+                    number++;
+                }
+                else if (/[A-Z]/.test(password.value[i])) {
+                    capitalLetter++;
+                }
+                else if (/[!@#$%^&*()_+\-=[\]{};':"\\,.<>\/?]/.test(password.value[i])) {
+                    specialSign++;
+                }
+            }
+            if (specialSign > 0 && number > 0 && capitalLetter > 0){
+                return true
+            }
+            else{
+                alert("Your password is not strong enough")
+                return false
+            }
+        }
+        function validateBirthday(){
+            let today = new Date(); 
+            let birthDate = new Date(birthdate.value);
+            let yearToday = today.getFullYear();
+            let yearBorn = birthDate.getFullYear();
+            age = yearToday - yearBorn
+            if (age < 18){
+                alert("You need to be 18 years old.")
+                return false
+            }
+            else{
+                return true
+            }
+        }
+        function validate(){
+            if (validateBirthday() && validateName() && validatePassword()){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        </script>
+    </body>
 </html>
 ```
 
