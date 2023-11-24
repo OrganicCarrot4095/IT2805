@@ -411,5 +411,58 @@ Selectors:
         }
         </script>
 ```
+#### Event propagation VS Event bubbling
+Event propagation is a mechanism in which an event triggers on a DOM element and then propagates (or travels) through its ancestors in the DOM tree. This mechanism consists of two main phases: event capturing and event bubbling. 
 
+1. **Event Capturing (or Trickling)**: 
+   - This is the first phase in the event propagation model. 
+   - During event capturing, the event starts from the topmost element (the document object), and travels down the DOM tree to the target element. 
+   - It's not commonly used as the default behavior in most web applications.
+
+2. **Event Bubbling**: 
+   - This is the more commonly used phase in event propagation. 
+   - In event bubbling, once the event has reached the target element, it then bubbles up the DOM tree, triggering handlers on each ancestor element until it reaches the top of the tree (usually the document object).
+   - This is the default behavior of most events in the DOM.
+
+### Example to Illustrate Event Bubbling:
+
+Suppose you have a simple HTML structure like this:
+
+```html
+<div id="parent">
+    <button id="child">Click Me!</button>
+</div>
+```
+
+And you attach event listeners to both the `div` (parent) and the `button` (child):
+
+```javascript
+document.getElementById('parent').addEventListener('click', function() {
+    alert('Parent Div Clicked!');
+});
+
+document.getElementById('child').addEventListener('click', function() {
+    alert('Button Clicked!');
+});
+```
+
+When you click on the `button`, the following happens:
+
+1. The event on the `button` is triggered first. An alert pops up saying "Button Clicked!".
+2. After the `button`'s event handler is executed, the event bubbles up to the `div` (the parent element). Its event handler is then triggered, and an alert pops up saying "Parent Div Clicked!".
+
+### Stopping Event Bubbling:
+
+Sometimes, you might not want an event to bubble up the DOM tree. You can stop this behavior by using `event.stopPropagation()` in the event handler. For example:
+
+```
+document.getElementById('child').addEventListener('click', function(event) {
+    alert('Button Clicked!');
+    event.stopPropagation(); // This stops the event from bubbling up
+});
+```
+
+With `event.stopPropagation()` called on the `button`'s click event, clicking the `button` will only trigger the alert for the `button` and will not bubble up to trigger the `div`'s event handler. 
+
+Understanding event propagation, especially event bubbling, is crucial for effective event handling in web applications, as it allows you to control how events are handled and propagated through the DOM.
 
