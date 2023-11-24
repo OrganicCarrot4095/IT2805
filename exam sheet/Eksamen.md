@@ -292,7 +292,7 @@ Eventlisteners:
 
 
 ## Example task
-
+```
 <html>
 <head>
     <style>
@@ -355,6 +355,6 @@ Eventlisteners:
     </script>
 </body>
 </html>
-
+```
 
 
