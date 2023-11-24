@@ -194,8 +194,6 @@ a:active{border: 1px solid black} // All active links
 
 
 
-
-
 ## JavaScript
 - Data types: string, number, boolean
 - Aritmetics: addition (+), subtraction (-), multiplication (*), division (/), modulo (%)
@@ -207,23 +205,16 @@ a:active{border: 1px solid black} // All active links
 	const movie = {
 		title: "Bruno",
 		director: "Larry Charles",
-		releaseDate: 2009
-  	}
+		releaseDate: 2009}
 
   	console.log(movie.title/movie["title"]) // logs title to console 
   	movie.genre = "documentary" // creates new property
   ```
 - Functions:
   ```
-  	var lolz = function() {
-		return "loser"
-  	}
-  
-  	function lolz() {
-		return "loser"
-  	}
-
-  	console.log(lolz())
+  	var lolz = function() {  		function lolz() {
+		return "loser"				return "loser"		console.log(lolz())
+  	}  					}
   ```
   
 
@@ -257,36 +248,37 @@ Selectors:
 - ```.getElementByTagName('tag')```: selects element with specified tag name
 
 #### Modifying
-```const item = document.selector(...)```
+```const item = document.selector(...)			const groceries = document.getElementsByTagName('li');```
 
-```item[].innerText = "...";```
+```item[index if list].innerText = "...";		groceries[0].innerText = 'Juice';```
 
 
 #### Adding
-```const parentItem = document.selector(...)```
+```const parentItem = document.selector(...)		const grocerylist = document.getElementsByTagName('ul')[0];```
 
-```const item = document.createElement(...)```
+```const item = document.createElement(...) 		const soapItem = document.createElement('li');```
 
-```item.innerText = ""```
+```item.innerText = ""					soapItem.innerText = 'Soap';```
+	
+```parentItem.appendChild(item)				groceryList.appendChild(soapItem);```
 
-```parentItem.appendChild(item)```
 
 
 #### Removing
-```const parentItem = document.selector(...)```
+```const parentItem = document.selector(...) 		const groceryList = document.getElementsByTagName('ul')[0];```
 
-```const item = parentItem.firstChild```
+```const item = parentItem.firstChild			const milkItem = groceryList.firstChild;```
 
-```parentItem.removeChild(item)```
+```parentItem.removeChild(item)				groceryList.removeChild(milkItem);```
+
 
 #### Events
 ```const item = document.selector(...)```
 
-```item.addEventLister('event', (event) => {do this})```
+```item.addEventLister('event',  {do this})```
 
-Eventlisteners:
 <div>
-	<img src="events1.png" width="305"/>
+	<img src="events1.png" width="304"/>
 	<img src="events2.png" width="305"/>
 	<img src="events3.png" width="325"/>
 </div>
@@ -294,63 +286,61 @@ Eventlisteners:
 
 ## Example tasks
 ```
-<html>
-<head>
-    <style>
-        #correct{display: none;}
-        #incorrect{display: none;}
-    </style>
-</head>
-<body>
-    Email: <input type="text" id = "mail"> </input> <br>
-    <img src="correct.png" id="correct">
-    <img src="incorrect.png" id="incorrect">
-    <script>
-        let email = document.getElementById("mail")
-        mail.addEventListener('mouseover', changeColor)
-        mail.addEventListener('focus', changeColor)
-        function changeColor(){
-            email.style.backgroundColor = 'yellow'
-        }
-        mail.addEventListener('blur',validate)
-        function validate(){
-            if (checkCharacters() && checkBeforeAndAfter() && checkAfter()){
-                document.getElementById('correct').style.display = 'inline'
-                document.getElementById('incorrect').style.display = 'none'
-            } else {
-                document.getElementById('correct').style.display = 'none'
-                document.getElementById('incorrect').style.display = 'inline'
-            }
-        }
-        function checkCharacters(){
-            let mail = email.value
-            if (mail.includes(".") && mail.includes("@") ){
-                return true}
-            else {return false}
-        }
-        function checkBeforeAndAfter(){
-            let mail = email.value
-            let splitMail = mail.split("@")
-            if(splitMail[0].length > 1 && splitMail[1].length > 1) {
-                return true}
-            else {return false}
-        }
-        function checkAfter(){
-            let mail = email.value
-            let splitMail = mail.split(".")
-            if(splitMail[1].length > 1) {
-                return true}
-            else {return false}
-        }
-        mail.addEventListener('keyup', changeCase)
-        function changeCase(){
-            email.value=email.value.toUpperCase()
-        }
-    </script>
-</body>
+	<head>
+	    <style>
+	        #correct{display: none;}
+	        #incorrect{display: none;}
+	    </style>
+	</head>
+	<body>
+	    Email: <input type="text" id = "mail"> </input> <br>
+	    <img src="correct.png" id="correct">
+	    <img src="incorrect.png" id="incorrect">
+	    <script>
+	        let email = document.getElementById("mail")
+	        mail.addEventListener('mouseover', changeColor)
+	        mail.addEventListener('focus', changeColor)
+		function changeColor(){
+	            email.style.backgroundColor = 'yellow'
+	        }
+	        mail.addEventListener('blur',validate)
+	        function validate(){
+	            if (checkCharacters() && checkBeforeAndAfter() && checkAfter()){
+	                document.getElementById('correct').style.display = 'inline'
+	                document.getElementById('incorrect').style.display = 'none'
+	            } else {
+	                document.getElementById('correct').style.display = 'none'
+	                document.getElementById('incorrect').style.display = 'inline'
+	            }
+	        }
+	        function checkCharacters(){
+	            let mail = email.value
+	            if (mail.includes(".") && mail.includes("@") ){
+	                return true}
+	            else {return false}
+	        }
+	        function checkBeforeAndAfter(){
+	            let mail = email.value
+	            let splitMail = mail.split("@")
+	            if(splitMail[0].length > 1 && splitMail[1].length > 1) {
+	                return true}
+	            else {return false}
+	        }
+	        function checkAfter(){
+	            let mail = email.value
+	            let splitMail = mail.split(".")
+	            if(splitMail[1].length > 1) {
+	                return true}
+	            else {return false}
+	        }
+	        mail.addEventListener('keyup', changeCase)
+	        function changeCase(){
+	            email.value=email.value.toUpperCase()
+	        }
+	    </script>
+	</body>
 ```
 ```
-<body>
         <form class="form">
             <div>
                 <label>First Name:</label>
@@ -424,8 +414,6 @@ Eventlisteners:
             else{return false;}
         }
         </script>
-    </body>
-</html>
 ```
 
 
