@@ -6,7 +6,7 @@ TCP/IP, OSI-model: application (HTTP, FTP, SSH), transport (TCP, UDP), network (
 
 ## Document Object Model
 Programming interface for HTML and XML. A web page is a document, which can be displayed in the browser, the HTML file itself or as a document tree. This HTML file:
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -66,7 +66,7 @@ This "<...>" is called a tag, while this "<...></...>" is called an element. HTM
 - SVG (Scalable Vector Graphics): vector format, can scal indefinitely without loosing quality. good for logos, graphics and animations, bad for everything else.
 
 #### Video (same concept with audio)
-```
+```html
 <video src="" controls (gives user access to video controls)>
 	<p> Your browser doesn't support HTML5 video.</p>
 </video>
@@ -80,7 +80,7 @@ other attributes: ```autoplay```, ```height```, ```width```, ```loop```, ```mute
 
 
 #### Table
-```
+```html
 <table>                                                  <table>
 	<tr>                                                     <tr>
 		<th>First name</th>					<th scope="row">First name</th>
@@ -151,7 +151,7 @@ Order of precence:
 - Centering elements: ```margin-left:auto``` and ```margin-right:auto```
 - Border: ```border-style```(e.g. none, hidden, dotted, dashed, solid, double), ```border-color``` and ```border-width```
   
-```
+```html
 .task1:hover OR a:first-child:hover{color: green; font-size: 22px;} // Spesific link
 i:first-of-type{background-color: yellow;} // First italics
 a::before{content: url(smiley.gif)} // Smiley before link
@@ -179,7 +179,7 @@ a:active{border: 1px solid black} // All active links
 
 #### Responsive web design
 
-```
+```html
 @media all/screen/print (expression) and/not/only (expression){
 	element {
 		proptery: value;
@@ -197,7 +197,7 @@ a:active{border: 1px solid black} // All active links
 - Variables: ```var``` (function-scoped and allows re-declaration), ```let``` (block-scoped), ```const``` (block-scoped and doesn't allow re-delaration)
 - Conditions and loops: ```if```, ```while```, ```for```, ```break```, ```continue```
 - Objects:
-  ```
+  ```javascript
 	const movie = {
 		title: "Bruno",
 		director: "Larry Charles",
@@ -207,7 +207,7 @@ a:active{border: 1px solid black} // All active links
   	movie.genre = "documentary" // creates new property
   ```
 - Functions:
-  ```
+  ```javascript
   	var lolz = function() {  		function lolz() {
 		return "loser"				return "loser"		console.log(lolz())
   	}  					}
@@ -215,7 +215,7 @@ a:active{border: 1px solid black} // All active links
   
 
 #### JSON
-```
+```javascript
 	JSON.stringify(movie) -> "{title: "Bruno", director: "Larry Charles", releaseDate: 2009, genre: "documentary"}"
 	const movieJSON = JSON.stringify(movie)
  	console.log(JSON.parse(movieJSON).title) 
@@ -244,36 +244,32 @@ Selectors:
 - ```.getElementByTagName('tag')```: selects element with specified tag name
 
 #### Modifying
-```const item = document.selector(...)			const groceries = document.getElementsByTagName('li');```
-
-```item[index if list].innerText = "...";		groceries[0].innerText = 'Juice';```
+```javascript
+const item = document.selector(...)			const groceries = document.getElementsByTagName('li');
+item[index if list].innerText = "...";			groceries[0].innerText = 'Juice';
+```
 
 
 #### Adding
-```const parentItem = document.selector(...)		const grocerylist = document.getElementsByTagName('ul')[0];```
-
-```const item = document.createElement(...) 		const soapItem = document.createElement('li');```
-
-```item.innerText = ""					soapItem.innerText = 'Soap';```
-	
-```parentItem.appendChild(item)				groceryList.appendChild(soapItem);```
-
+```javascript
+const parentItem = document.selector(...)		const grocerylist = document.getElementsByTagName('ul')[0];
+const item = document.createElement(...) 		const soapItem = document.createElement('li');
+item.innerText = ""					soapItem.innerText = 'Soap';	
+parentItem.appendChild(item)				groceryList.appendChild(soapItem);
+```
 
 
 #### Removing
-```const parentItem = document.selector(...) 		const groceryList = document.getElementsByTagName('ul')[0];```
-
-```const item = parentItem.firstChild			const milkItem = groceryList.firstChild;```
-
-```parentItem.removeChild(item)				groceryList.removeChild(milkItem);```
+```javascript
+const parentItem = document.selector(...) 		const groceryList = document.getElementsByTagName('ul')[0];
+const item = parentItem.firstChild			const milkItem = groceryList.firstChild;
+parentItem.removeChild(item)				groceryList.removeChild(milkItem);
+```
 
 
 #### Events
 ```javascript 
 const item = document.selector(...)
-```
-
-```javascript
 item.addEventLister('event',  {do this})
 ```
 
