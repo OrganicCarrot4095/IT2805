@@ -414,6 +414,137 @@ item.addEventLister('event',  {do this})
         }
         </script>
 ```
+
+```javascript
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exam 03 - C4</title>
+        <style>
+            body{
+                display: flex;
+                font-family: 'Courier New', Courier, monospace;
+                background-color: beige;
+                justify-content: center;
+            }
+            #content{
+                position: relative;
+                width: fit-content;
+                background-color: rgba(165, 42, 42, 0.636);
+                padding: 1% 2% 4% 2%;
+                margin: 2%;
+                border-radius: 30px;
+                border: brown solid 5px; 
+            }
+            div > input{
+                margin: 20px;
+            }
+            #buttons {
+                display: flex;
+                background-color: brown;
+                justify-content: center;
+                border-radius: 30px;
+            }
+            .button{
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                font-family: 'Courier New', Courier, monospace;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <h1 style="text-align:center;">Calculator</h1>
+            1st Number : <input type="text" id="firstNumber" /><br>
+            2nd Number: <input type="text" id="secondNumber" /><br>
+            <div id="buttons">
+                <input type="button" class="button" onClick="multiplyBy()" Value="Multiply" />
+                <input type="button" class="button" onClick="divideBy()" Value="Divide" /><br>
+                <input type="button" class="button" onClick="reset()" Value="Reset" /><br>
+            </div>
+            <span id = "result"></span>
+        </div>
+        <script>            
+            function multiplyBy(){
+                let first = document.getElementById("firstNumber").value;
+                let second = document.getElementById("secondNumber").value;
+                let res2Return = document.getElementById("result");
+                if(first < 0 || second < 0){
+                    res2Return.textContent = "Tallene må være positive";
+                    return;
+                }
+                let res = parseInt(first) * parseInt(second);
+                res2Return.textContent = "Resultatet av " + first + " * " + second + " = " + res;
+            }
+            function divideBy(){
+                let first = document.getElementById("firstNumber").value;
+                let second = document.getElementById("secondNumber").value;
+                let res2Return = document.getElementById("result");
+                if(first < 0 || second < 0){
+                    res2Return.textContent = "Tallene må være positive";
+                    return;
+                }
+                let res = parseInt(first) / parseInt(second);
+                res2Return.textContent = "Resultatet av " + first + " / " + second + " = " + res;
+            }
+            function reset(){
+                document.getElementById("firstNumber").value = "";
+                document.getElementById("secondNumber").value = "";
+                document.getElementById("result").textContent = "";
+            }
+        </script>
+    </body>
+</html>
+
+function changeDisplay() {
+    var element = document.getElementById("magic");
+    if (element){
+        element.style.display = "none";
+    }
+}
+
+function changeVisibility () {
+    var element = document.getElementById("magic");
+    if (element){
+        element.style.visibility = "hidden"
+        element.style.display = "block"
+    }
+}
+
+function reset () {
+    var element = document.getElementById("magic")
+    if (element){
+        element.style.visibility = "visible"
+        element.style.display = "block"
+    }
+}
+
+const technologies = [
+    'HTML5',
+    'CSS3',
+    'JavaScript',
+    'Python',
+    'Java',
+    'AJAX',
+    'JSON',
+    'React',
+    'Angular',
+    'Bootstrap',
+    'Node.js'
+];
+
+for (let i = 0; i < technologies.length; i++) {
+    const listElement = document.createElement("li");
+    let element = document.createTextNode(technologies[i]);
+    listElement.appendChild(element)
+    document.getElementById("tech").appendChild(listElement)
+}
+```
+
+
+
 #### Event propagation VS Event bubbling
 Event propagation is a mechanism in which an event triggers on a DOM element and then propagates (or travels) through its ancestors in the DOM tree. This mechanism consists of two main phases: event capturing and event bubbling. 
 
